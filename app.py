@@ -68,7 +68,7 @@ def upload_certificate():
     # This is a placeholder. You'd use Supabase's API here.
     data = request.form
     file = request.files['file']
-    # TODO: Upload file to Supabase Storage and get file_url
+    # TODO: Upload file to Supabase Storage and get file_url #
     file_url = "https://supabase.storage.fakeurl/" + file.filename
     cert = Certificate(
         branch_id=data.get('branch_id'),
