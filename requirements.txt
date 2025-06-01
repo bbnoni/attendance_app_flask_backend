@@ -1,8 +1,9 @@
-flask
-flask_sqlalchemy
-flask_cors
+Flask
+Flask_sqlalchemy
+Flask_cors
 python-dotenv
 requests
 gunicorn
 psycopg2-binary
 Flask-Migrate
+Werkzeug
