@@ -7,6 +7,7 @@ from datetime import datetime
 from dotenv import load_dotenv
 from werkzeug.security import generate_password_hash, check_password_hash
 from functools import wraps
+from flask import send_from_directory
 
 # Load environment variables from .env
 load_dotenv()
@@ -159,6 +160,11 @@ def get_all_attendance():
             'longitude': r.longitude
         })
     return jsonify(result), 200
+
+
+@app.route('/')
+def index():
+    return send_from_directory('.', 'index.html')    
 
 if __name__ == '__main__':
     with app.app_context():
