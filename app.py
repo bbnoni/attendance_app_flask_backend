@@ -144,7 +144,7 @@ def upload_certificate():
     db.session.commit()
     return jsonify({'message': 'Certificate uploaded', 'file_url': file_url}), 201
 
-# Example: Auditor-only endpoint to get all attendance records
+# Example: Auditor-only endpoint to get all attendance records#
 @app.route('/api/attendance/all', methods=['GET'])
 @role_required('auditor')
 def get_all_attendance():
